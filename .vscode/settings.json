@@ -1,3 +1,10 @@
 {
-    "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"]
+    "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
+    "scss.format.enable": true,
+    "scss.validate": false,
+    "css.validate": false,
+    "less.validate": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.stylelint": "always"
+    }
 }
