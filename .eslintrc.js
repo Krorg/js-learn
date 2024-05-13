@@ -45,6 +45,8 @@ module.exports = {
         'operator-linebreak': 'off',
         'implicit-arrow-linebreak': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'max-len': ['error', { ignoreComments: true }],
+        'react/self-closing-comp': 'off',
     },
     globals: {
         __IS_DEV__: true,
