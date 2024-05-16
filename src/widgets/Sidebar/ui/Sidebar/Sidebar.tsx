@@ -23,6 +23,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
             ])}
         >
             <button
+                className="clear"
                 data-testid="sidebar-toggle"
                 type="button"
                 onClick={onToggle}
