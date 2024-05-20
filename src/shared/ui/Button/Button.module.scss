@@ -41,6 +41,18 @@
     padding: 0;
 }
 
+.size_m {
+    font: var(--font-m);
+}
+
+.size_l {
+    font: var(--font-l);
+}
+
+.size_xl {
+    font: var(--font-xl);
+}
+
 .square.size_m {
     width: var(--font-line-m);
     height: var(--font-line-m);
@@ -54,18 +66,6 @@
 .square.size_xl {
     width: var(--font-line-xl);
     height: var(--font-line-xl);
-}
-
-.size_m {
-    font: var(--font-m);
-}
-
-.size_l {
-    font: var(--font-l);
-}
-
-.size_xl {
-    font: var(--font-xl);
 }
 
 .borderRadius {
