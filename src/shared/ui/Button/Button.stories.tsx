@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonRadius, ButtonSize, ButtonTheme } from './Button';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
@@ -23,24 +23,112 @@ Primary.args = {
 export const Clear = Template.bind({});
 Clear.args = {
     children: 'Text',
-    theme: ThemeButton.CLEAR,
+    theme: ButtonTheme.CLEAR,
 };
 
 export const Outline = Template.bind({});
 Outline.args = {
     children: 'Text',
-    theme: ThemeButton.OUTLINE,
+    theme: ButtonTheme.OUTLINE,
 };
 
 export const OutlineDark = Template.bind({});
 OutlineDark.args = {
     children: 'Text',
-    theme: ThemeButton.OUTLINE,
+    theme: ButtonTheme.OUTLINE,
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const InvertedClear = Template.bind({});
 InvertedClear.args = {
     children: 'Text',
-    theme: ThemeButton.INVERTED_CLEAR,
+    theme: ButtonTheme.INVERTED_CLEAR,
+};
+
+export const BackgroundTheme = Template.bind({});
+BackgroundTheme.args = {
+    children: 'Text',
+    theme: ButtonTheme.BACKGROUND,
+};
+
+export const BackgroundInverted = Template.bind({});
+BackgroundInverted.args = {
+    children: 'Text',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+};
+
+export const Square = Template.bind({});
+Square.args = {
+    children: '<',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+};
+
+export const SquareSizeM = Template.bind({});
+SquareSizeM.args = {
+    children: '<',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.M,
+};
+
+export const SquareSizeL = Template.bind({});
+SquareSizeL.args = {
+    children: '<',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.L,
+};
+
+export const SquareSizeXL = Template.bind({});
+SquareSizeXL.args = {
+    children: '<',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.XL,
+};
+
+export const Border = Template.bind({});
+Border.args = {
+    children: '<',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    radius: ButtonRadius.ALL,
+    size: ButtonSize.XL,
+};
+
+export const BorderLeft = Template.bind({});
+BorderLeft.args = {
+    children: '<',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    radius: ButtonRadius.LEFT,
+    size: ButtonSize.XL,
+};
+
+export const BorderRight = Template.bind({});
+BorderRight.args = {
+    children: '<',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    radius: ButtonRadius.RIGHT,
+    size: ButtonSize.XL,
+};
+
+export const BorderTop = Template.bind({});
+BorderTop.args = {
+    children: '<',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    radius: ButtonRadius.TOP,
+    size: ButtonSize.XL,
+};
+
+export const BorderBottom = Template.bind({});
+BorderBottom.args = {
+    children: '<',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    radius: ButtonRadius.BOTTOM,
+    size: ButtonSize.XL,
 };
