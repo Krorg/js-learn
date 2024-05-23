@@ -11,5 +11,7 @@
     "Обновить страницу": "Update page",
     "throw error": "throw error",
     "Тык": "Click",
-    "Войти": "SignUp"
+    "Войти": "SignUp",
+    "increment": "increment",
+    "decrement": "decrement"
 }
