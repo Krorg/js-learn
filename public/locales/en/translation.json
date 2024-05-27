@@ -13,5 +13,7 @@
     "Тык": "Click",
     "Войти": "SignUp",
     "increment": "increment",
-    "decrement": "decrement"
+    "decrement": "decrement",
+    "Username": "Username",
+    "Password": "Password"
 }
