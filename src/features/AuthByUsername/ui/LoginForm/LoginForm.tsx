@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Button, ButtonRadius, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import cls from './LoginForm.module.scss';
 
@@ -24,7 +24,11 @@ export const LoginForm = ({ className }: LoginFormProps) => {
                 className={cls.input}
                 placeholder={t('Password')}
             />
-            <Button className={cls.loginBtn} theme={ButtonTheme.OUTLINE}>
+            <Button
+                className={cls.loginBtn}
+                theme={ButtonTheme.OUTLINE}
+                radius={ButtonRadius.ALL}
+            >
                 {t('Войти')}
             </Button>
         </div>

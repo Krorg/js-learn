@@ -66,21 +66,21 @@
 }
 
 .borderRadius {
-    border-radius: 15%;
+    border-radius: 10px;
 }
 
 .borderRadius_left {
-    border-radius: 15% 0% 0% 15%;
+    border-radius: 10px 0 0 10px;
 }
 
 .borderRadius_right {
-    border-radius: 0% 15% 15% 0%;
+    border-radius: 0 10px 10px 0;
 }
 
 .borderRadius_top {
-    border-radius: 15% 15% 0% 0%;
+    border-radius: 10px 10px 0 0;
 }
 
 .borderRadius_bottom {
-    border-radius: 0% 0% 15% 15%;
+    border-radius: 0 0 10px 10px;
 }
