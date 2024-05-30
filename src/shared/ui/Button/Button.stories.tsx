@@ -131,3 +131,11 @@ BorderBottom.args = {
     radius: ButtonRadius.BOTTOM,
     size: ButtonSize.XL,
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: 'Text',
+    theme: ButtonTheme.OUTLINE,
+    radius: ButtonRadius.ALL,
+    disabled: true,
+};
