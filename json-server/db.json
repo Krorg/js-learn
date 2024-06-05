@@ -41,6 +41,13 @@
         }
     ],
     "profile": {
-        "name": "typicode"
+        "first": "Виктор",
+        "lastname": "Петров",
+        "age": 25,
+        "currency": "RUB",
+        "country": "Russia",
+        "city": "Saint-Petersberg",
+        "username": "admin",
+        "avatar": "https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/japanese-traditional-man-1024.png"
     }
 }
