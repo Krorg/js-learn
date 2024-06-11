@@ -19,5 +19,11 @@
     "Форма авторизации": "Authorization form",
     "Неверный логин или пароль": "Invalid username or password",
     "Выйти": "LogOut",
-    "Профиль": "Profile"
+    "Профиль": "Profile",
+    "Произошла ошибка при загрузке профиля": "An error occurred while uploading the profile",
+    "Попробуйте обновить страницу": "Try refreshing the page",
+    "Отменить": "Cancel",
+    "Валюта": "Currency",
+    "Сохранить": "Save",
+    "Страна": "Country"
 }

@@ -1,53 +1,53 @@
 {
-    "posts": [
-        {
-            "id": "1",
-            "title": "json-server",
-            "author": "typicode"
-        },
-        {
-            "id": "2",
-            "title": "json-server 2",
-            "author": "typicode"
-        },
-        {
-            "id": "3",
-            "title": "json-server 3",
-            "author": "typicode"
-        },
-        {
-            "id": "4",
-            "title": "json-server 4",
-            "author": "typicode"
-        }
-    ],
-    "comments": [
-        {
-            "id": "1",
-            "body": "some comment",
-            "postId": "1"
-        },
-        {
-            "id": "2",
-            "body": "some comment 2",
-            "postId": "2"
-        }
-    ],
-    "users": [
-        {
-            "id": "1",
-            "username": "admin",
-            "password": "admin"
-        }
-    ],
-    "profile": {
-        "first": "Виктор",
-        "lastname": "Петров",
-        "age": 25,
-        "currency": "RUB",
-        "country": "Russia",
-        "city": "Saint-Petersberg",
-        "username": "admin",
-        "avatar": "https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/japanese-traditional-man-1024.png"
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "json-server 2",
+      "author": "typicode"
+    },
+    {
+      "id": "3",
+      "title": "json-server 3",
+      "author": "typicode"
+    },
+    {
+      "id": "4",
+      "title": "json-server 4",
+      "author": "typicode"
     }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "body": "some comment 2",
+      "postId": "2"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin"
+    }
+  ],
+  "profile": {
+    "first": "Виктор",
+    "lastname": "Петров",
+    "age": 25,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Saint-Petersberg",
+    "username": "admin",
+    "avatar": "https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/japanese-traditional-man-1024.png"
+  }
 }
