@@ -6,5 +6,10 @@
     "Возраст": "Age",
     "Город": "City",
     "Имя пользователя": "Username",
-    "Аватар": "Avatar"
+    "Аватар": "Avatar",
+    "Возникла ошибка на сервере": "An error occurred on the server",
+    "Некорректный возраст": "Incorrect age",
+    "Введите страну": "Select country",
+    "Имя, фамилия не могут быть пустыми": "First name, last name cannot be empty",
+    "Данные не указаны": "Data is not specified"
 }
