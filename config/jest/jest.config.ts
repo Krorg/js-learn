@@ -10,7 +10,7 @@ export default {
     testEnvironment: 'jsdom',
     coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
     moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
-    moduleDirectories: ['node_modules'],
+    moduleDirectories: ['node_modules', 'src'],
     modulePaths: ['<rootDir>src'],
     testMatch: [
         // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
