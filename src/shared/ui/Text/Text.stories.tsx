@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Text, TextAlign, TextTheme } from './Text';
+import { Text, TextAlign, TextSize, TextTheme } from './Text';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
@@ -74,4 +74,18 @@ alignCenter.args = {
     title: 'Header',
     text: 'Body text',
     align: TextAlign.CENTER,
+};
+
+export const SizeM = Template.bind({});
+SizeM.args = {
+    title: 'Header',
+    text: 'Body text',
+    size: TextSize.M,
+};
+
+export const SizeL = Template.bind({});
+SizeL.args = {
+    title: 'Header',
+    text: 'Body text',
+    size: TextSize.L,
 };
