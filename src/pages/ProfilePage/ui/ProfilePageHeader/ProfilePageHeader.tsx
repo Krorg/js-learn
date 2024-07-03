@@ -10,17 +10,21 @@ import {
 } from 'entities/Profile';
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { getUserAuthDataId } from 'entities/User';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
     className?: string;
+    id: string;
 }
 
-export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
+export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
+    const { className, id } = props;
     const { t } = useTranslation('profile');
-    const dispatch = useAppDispatch();
-
+    const userId = useSelector(getUserAuthDataId);
+    const canEdit = userId === id;
     const readonly = useSelector(getProfileReadonly);
+    const dispatch = useAppDispatch();
 
     const onEdit = useCallback(() => {
         dispatch(profileActions.setReadonly(false));
@@ -31,39 +35,43 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     const onSave = useCallback(() => {
-        dispatch(updateProfileData());
-    }, [dispatch]);
+        dispatch(updateProfileData(id));
+    }, [dispatch, id]);
 
     return (
         <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
             <Text title={t('Профиль')} align={TextAlign.CENTER} />
-            {readonly ? (
-                <Button
-                    theme={ButtonTheme.OUTLINE}
-                    radius={ButtonRadius.ALL}
-                    className={cls.editBtn}
-                    onClick={onEdit}
-                >
-                    {t('Редактировать')}
-                </Button>
-            ) : (
-                <div>
-                    <Button
-                        theme={ButtonTheme.OUTLINE}
-                        radius={ButtonRadius.ALL}
-                        className={cls.saveBtn}
-                        onClick={onSave}
-                    >
-                        {t('Сохранить')}
-                    </Button>
-                    <Button
-                        theme={ButtonTheme.OUTLINE_RED}
-                        radius={ButtonRadius.ALL}
-                        className={cls.editBtn}
-                        onClick={onCancelEdit}
-                    >
-                        {t('Отменить')}
-                    </Button>
+            {canEdit && (
+                <div className={cls.btnWrapper}>
+                    {readonly ? (
+                        <Button
+                            theme={ButtonTheme.OUTLINE}
+                            radius={ButtonRadius.ALL}
+                            className={cls.editBtn}
+                            onClick={onEdit}
+                        >
+                            {t('Редактировать')}
+                        </Button>
+                    ) : (
+                        <div>
+                            <Button
+                                theme={ButtonTheme.OUTLINE}
+                                radius={ButtonRadius.ALL}
+                                className={cls.saveBtn}
+                                onClick={onSave}
+                            >
+                                {t('Сохранить')}
+                            </Button>
+                            <Button
+                                theme={ButtonTheme.OUTLINE_RED}
+                                radius={ButtonRadius.ALL}
+                                className={cls.editBtn}
+                                onClick={onCancelEdit}
+                            >
+                                {t('Отменить')}
+                            </Button>
+                        </div>
+                    )}
                 </div>
             )}
         </div>

@@ -55,7 +55,7 @@ module.exports = {
             'error',
             {
                 ignoreComments: true,
-                code: 120,
+                code: 140,
             },
         ],
         'react/self-closing-comp': 'off',

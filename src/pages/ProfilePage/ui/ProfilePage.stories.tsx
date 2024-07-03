@@ -12,6 +12,9 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    parameters: {
+        id: '1',
+    },
 } as ComponentMeta<typeof ProfilePage>;
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => (
@@ -19,6 +22,7 @@ const Template: ComponentStory<typeof ProfilePage> = (args) => (
 );
 
 const data = {
+    id: '1',
     username: 'Nagibator228',
     first: 'Вася',
     lastname: 'Пупкин',
@@ -31,7 +35,11 @@ const data = {
 
 export const Primary = Template.bind({});
 Primary.args = {};
-Primary.decorators = [StoreDecorator({ profile: { form: data } })];
+Primary.decorators = [
+    StoreDecorator({
+        profile: { form: data },
+    }),
+];
 
 export const Dark = Template.bind({});
 Dark.args = {};

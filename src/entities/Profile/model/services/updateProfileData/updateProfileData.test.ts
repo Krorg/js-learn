@@ -5,6 +5,7 @@ import { Currency } from 'entities/Currency';
 import { ValidateProfileError } from '../../types/profile';
 
 const data = {
+    id: '1',
     username: 'Nagibator228',
     first: 'Вася',
     lastname: 'Пупкин',
@@ -23,7 +24,7 @@ describe('updateProfileData.test', () => {
             },
         });
         thunk.api.put.mockReturnValue(Promise.resolve({ data }));
-        const result = await thunk.callThunk();
+        const result = await thunk.callThunk('1');
 
         expect(thunk.api.put).toHaveBeenCalled();
         expect(result.meta.requestStatus).toBe('fulfilled');
@@ -36,7 +37,7 @@ describe('updateProfileData.test', () => {
             },
         });
         thunk.api.put.mockReturnValue(Promise.resolve({ status: 403 }));
-        const result = await thunk.callThunk();
+        const result = await thunk.callThunk('1');
 
         expect(result.meta.requestStatus).toBe('rejected');
         expect(result.payload).toEqual([ValidateProfileError.SERVER_ERROR]);
@@ -47,7 +48,7 @@ describe('updateProfileData.test', () => {
                 form: { ...data, lastname: '' },
             },
         });
-        const result = await thunk.callThunk();
+        const result = await thunk.callThunk('1');
 
         expect(result.meta.requestStatus).toBe('rejected');
         expect(result.payload).toEqual([

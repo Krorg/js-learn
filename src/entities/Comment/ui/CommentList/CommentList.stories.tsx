@@ -5,7 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 
 export default {
-    title: 'entities/CommentList',
+    title: 'entities/Comment/CommentList',
     component: CommentList,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -55,7 +55,6 @@ Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Loading = Template.bind({});
 Loading.args = {
-    comments,
     isLoading: true,
 };
 

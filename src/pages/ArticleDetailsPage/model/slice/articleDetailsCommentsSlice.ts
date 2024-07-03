@@ -1,4 +1,3 @@
-import { isLoading } from './../../../../entities/Profile/ui/ProfileCard/ProfileCard.stories';
 import {
     PayloadAction,
     createEntityAdapter,
@@ -6,6 +5,7 @@ import {
 } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { Comment } from 'entities/Comment';
+import { isLoading } from '../../../../entities/Profile/ui/ProfileCard/ProfileCard.stories';
 import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSchema';
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 
