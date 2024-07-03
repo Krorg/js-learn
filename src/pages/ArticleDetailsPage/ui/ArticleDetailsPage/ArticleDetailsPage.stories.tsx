@@ -103,8 +103,22 @@ Primary.decorators = [
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        articleDetails: {
+            data: article,
+        },
+    }),
+];
 
 export const Orange = Template.bind({});
 Orange.args = {};
-Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
+Orange.decorators = [
+    ThemeDecorator(Theme.ORANGE),
+    StoreDecorator({
+        articleDetails: {
+            data: article,
+        },
+    }),
+];
