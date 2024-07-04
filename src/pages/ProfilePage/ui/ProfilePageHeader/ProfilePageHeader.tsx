@@ -15,7 +15,7 @@ import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
     className?: string;
-    id: string;
+    id: string | undefined;
 }
 
 export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {

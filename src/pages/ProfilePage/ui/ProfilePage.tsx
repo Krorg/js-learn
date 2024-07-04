@@ -120,7 +120,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
         [dispatch]
     );
 
-    if (!id) {
+    if (!id && __PROJECT__ !== 'storybook') {
         return <div>{t('Страница пользователя не найдена')}</div>;
     }
 
