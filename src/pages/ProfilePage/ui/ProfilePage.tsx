@@ -24,6 +24,7 @@ import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
+import { Page } from 'shared/ui/Page/Page';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -121,12 +122,12 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     );
 
     if (!id && __PROJECT__ !== 'storybook') {
-        return <div>{t('Страница пользователя не найдена')}</div>;
+        return <Page>{t('Страница пользователя не найдена')}</Page>;
     }
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <ProfilePageHeader id={id} />
                 {validateErrors?.length &&
                     validateErrors.map((err) => (
@@ -150,7 +151,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
                     onChangeCurrency={onChangeCurrency}
                     readonly={readonly}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };

@@ -2,6 +2,7 @@ import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Page } from 'shared/ui/Page/Page';
 import { ArticleDetails } from 'entities/Article';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Text } from 'shared/ui/Text/Text';
@@ -56,17 +57,17 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     if (!id) {
         return (
-            <div
+            <Page
                 className={classNames(cls.ArticleDetailsPage, {}, [className])}
             >
                 {t('Статья не найдена')}
-            </div>
+            </Page>
         );
     }
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div
+            <Page
                 className={classNames(cls.ArticleDetailsPage, {}, [className])}
             >
                 <Button
@@ -83,7 +84,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                     isLoading={commentsIsLoading}
                     comments={comments}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };
