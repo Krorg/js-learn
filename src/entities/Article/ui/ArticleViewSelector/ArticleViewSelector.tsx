@@ -40,7 +40,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
                     theme={ButtonTheme.CLEAR}
                     onClick={onClick(viewType.view)}
                     className={cls.btn}
-                    key={index}
+                    key={viewType.view}
                 >
                     <Icon
                         Svg={viewType.icon}
