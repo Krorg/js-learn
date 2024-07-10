@@ -8,6 +8,7 @@ import {
     ArticleType,
 } from 'entities/Article/model/types/article';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Comment } from 'entities/Comment';
 
 export default {
     title: 'pages/ArticleDetailsPage',
@@ -95,12 +96,41 @@ const article: Article = {
     ],
 };
 
+const comments: Comment[] = [
+    {
+        id: '1',
+        text: 'Test comment',
+        user: {
+            id: '1',
+            username: 'Test user',
+            avatar: 'https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/japanese-traditional-man-1024.png',
+        },
+    },
+    {
+        id: '2',
+        text: 'Test comment 2',
+        user: {
+            id: '2',
+            username: 'User',
+            avatar: 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614550920_10-p-smeshariki-na-belom-fone-10.jpg',
+        },
+    },
+    {
+        id: '3',
+        text: 'Test comment 3',
+        user: { id: '3', username: 'NoAvatarUser' },
+    },
+];
+
 export const Primary = Template.bind({});
 Primary.args = {};
 Primary.decorators = [
     StoreDecorator({
         articleDetails: {
             data: article,
+        },
+        addCommentForm: {
+            text: '',
         },
     }),
 ];
