@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import ArticleDetailsPage from './ArticleDetailsPage';
+// import ArticleDetailsPage from './ArticleDetailsPage';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import {
@@ -9,6 +9,7 @@ import {
 } from 'entities/Article/model/types/article';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Comment } from 'entities/Comment';
+import { ArticleDetailsPageAsync as ArticleDetailsPage } from './ArticleDetailsPage.async';
 
 export default {
     title: 'pages/ArticleDetailsPage',
@@ -128,9 +129,6 @@ Primary.decorators = [
     StoreDecorator({
         articleDetails: {
             data: article,
-        },
-        addCommentForm: {
-            text: '',
         },
     }),
 ];

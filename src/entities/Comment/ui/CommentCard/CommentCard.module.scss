@@ -1,6 +1,5 @@
 .CommentCard {
     padding: 10px;
-    margin-top: 10px;
     border: 1px solid var(--primary-color);
     border-radius: 10px;
 }
@@ -8,10 +7,6 @@
 .header {
     display: flex;
     align-items: center;
-}
-
-.text {
-    margin-top: 10px;
 }
 
 .username {
