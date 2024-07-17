@@ -76,6 +76,13 @@ alignCenter.args = {
     align: TextAlign.CENTER,
 };
 
+export const SizeS = Template.bind({});
+SizeS.args = {
+    title: 'Header',
+    text: 'Body text',
+    size: TextSize.S,
+};
+
 export const SizeM = Template.bind({});
 SizeM.args = {
     title: 'Header',

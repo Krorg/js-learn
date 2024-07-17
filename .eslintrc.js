@@ -56,6 +56,8 @@ module.exports = {
                     'gap',
                     'justify',
                     'direction',
+                    'role',
+                    'as',
                 ],
             },
         ],
