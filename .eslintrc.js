@@ -77,6 +77,7 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'no-unsafe-optional-chaining': 'off',
+        'no-unused-expressions': 'off',
         indent: ['error', 4, { SwitchCase: 1 }],
     },
     globals: {

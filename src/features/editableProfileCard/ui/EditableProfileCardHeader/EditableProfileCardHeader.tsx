@@ -46,6 +46,7 @@ export const EditableProfileCardHeader = memo(
                                 theme={ButtonTheme.OUTLINE}
                                 radius={ButtonRadius.ALL}
                                 onClick={onEdit}
+                                data-testid="EditableProfileCardHeader.EditButton"
                             >
                                 {t('Редактировать')}
                             </Button>
@@ -55,6 +56,7 @@ export const EditableProfileCardHeader = memo(
                                     theme={ButtonTheme.OUTLINE}
                                     radius={ButtonRadius.ALL}
                                     onClick={onSave}
+                                    data-testid="EditableProfileCardHeader.SaveButton"
                                 >
                                     {t('Сохранить')}
                                 </Button>
@@ -62,6 +64,7 @@ export const EditableProfileCardHeader = memo(
                                     theme={ButtonTheme.OUTLINE_RED}
                                     radius={ButtonRadius.ALL}
                                     onClick={onCancelEdit}
+                                    data-testid="EditableProfileCardHeader.CancelButton"
                                 >
                                     {t('Отменить')}
                                 </Button>
