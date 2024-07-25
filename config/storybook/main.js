@@ -5,6 +5,7 @@ module.exports = {
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
         '@storybook/addon-queryparams',
+        'storybook-addon-mock/register',
     ],
     framework: '@storybook/react',
     core: {

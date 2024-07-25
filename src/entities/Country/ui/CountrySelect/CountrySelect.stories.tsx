@@ -18,9 +18,13 @@ const Template: ComponentStory<typeof CountrySelect> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {};
 
-export const Disabled = Template.bind({});
-Disabled.args = { readonly: true };
-
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Orange = Template.bind({});
+Orange.args = {};
+Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
+
+export const Disabled = Template.bind({});
+Disabled.args = { readonly: true };

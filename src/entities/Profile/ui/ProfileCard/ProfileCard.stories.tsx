@@ -39,6 +39,16 @@ Dark.args = {
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
+export const Orange = Template.bind({});
+Orange.args = { data };
+Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
+
+export const readOnly = Template.bind({});
+readOnly.args = {
+    data,
+    readonly: true,
+};
+
 export const withError = Template.bind({});
 withError.args = {
     error: 'error',

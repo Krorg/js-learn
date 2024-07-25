@@ -116,6 +116,17 @@ Dark.decorators = [
     ThemeDecorator(Theme.DARK),
 ];
 
+export const Orange = Template.bind({});
+Orange.args = {};
+Orange.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            data: article,
+        },
+    }),
+    ThemeDecorator(Theme.ORANGE),
+];
+
 export const Loading = Template.bind({});
 Loading.args = {};
 Loading.decorators = [

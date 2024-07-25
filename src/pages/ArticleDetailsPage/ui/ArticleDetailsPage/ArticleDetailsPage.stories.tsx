@@ -12,7 +12,7 @@ import { Comment } from 'entities/Comment';
 import { ArticleDetailsPageAsync as ArticleDetailsPage } from './ArticleDetailsPage.async';
 
 export default {
-    title: 'pages/ArticleDetailsPage',
+    title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
     component: ArticleDetailsPage,
     argTypes: {
         backgroundColor: { control: 'color' },

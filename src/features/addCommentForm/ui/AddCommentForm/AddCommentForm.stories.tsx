@@ -11,6 +11,13 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [
+        (Story) => (
+            <div style={{ padding: 10 }}>
+                <Story />
+            </div>
+        ),
+    ],
 } as ComponentMeta<typeof AddCommentForm>;
 
 const Template: ComponentStory<typeof AddCommentForm> = (args) => (
@@ -32,4 +39,13 @@ Dark.args = {
 Dark.decorators = [
     StoreDecorator({ addCommentForm: { text: 'Test comment text' } }),
     ThemeDecorator(Theme.DARK),
+];
+
+export const Orange = Template.bind({});
+Orange.args = {
+    onSendComment: action('onSendComment'),
+};
+Orange.decorators = [
+    StoreDecorator({ addCommentForm: { text: 'Test comment text' } }),
+    ThemeDecorator(Theme.ORANGE),
 ];

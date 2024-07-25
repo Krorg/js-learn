@@ -53,6 +53,12 @@ Dark.args = {
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
+export const Orange = Template.bind({});
+Orange.args = {
+    comments,
+};
+Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
+
 export const Loading = Template.bind({});
 Loading.args = {
     isLoading: true,
