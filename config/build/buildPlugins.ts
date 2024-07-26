@@ -3,9 +3,10 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import CircularDerpendencyPlugin from 'circular-dependency-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
-import CopyPlugin from 'copy-webpack-plugin';
 
 export function buildPlugins({
     paths,
@@ -33,6 +34,15 @@ export function buildPlugins({
         new CircularDerpendencyPlugin({
             exclude: /node_modules/,
             failOnError: true,
+        }),
+        new ForkTsCheckerWebpackPlugin({
+            typescript: {
+                diagnosticOptions: {
+                    semantic: true,
+                    syntactic: true,
+                },
+                mode: 'write-references',
+            },
         }),
     ];
 
