@@ -4,8 +4,10 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import CheckIcon from 'shared/assets/icons/check.svg';
 import { DropdownDirection } from 'shared/types/ui';
 import cls from './ListBox.module.scss';
-import { Button, ButtonTheme } from '../Button/Button';
-import { HStack } from '../Stack';
+import { Button, ButtonTheme } from '../../../Button/Button';
+import { HStack } from '../../../Stack';
+import { mapDirectionClass } from '../../styles/consts';
+import popupCls from '../../styles/popup.module.scss';
 
 export interface ListBoxItem {
     value: string;
@@ -23,13 +25,6 @@ interface ListBoxProps {
     label?: string;
     direction?: DropdownDirection;
 }
-
-const mapDirectionClass: Record<DropdownDirection, string> = {
-    bottom_left: cls.optionsBottomLeft,
-    bottom_right: cls.optionsBottomRight,
-    top_left: cls.optionsTopLeft,
-    top_right: cls.optionsTopRight,
-};
 
 export function ListBox(props: ListBoxProps) {
     const {
@@ -51,7 +46,10 @@ export function ListBox(props: ListBoxProps) {
             <HListBox
                 disabled={readonly}
                 as="div"
-                className={classNames(cls.ListBox, {}, [className])}
+                className={classNames(cls.ListBox, {}, [
+                    className,
+                    popupCls.popup,
+                ])}
                 value={value}
                 onChange={onChange}
             >
@@ -73,8 +71,8 @@ export function ListBox(props: ListBoxProps) {
                             {({ active, selected }) => (
                                 <li
                                     className={classNames(cls.item, {
-                                        [cls.active]: active,
-                                        [cls.disabled]: item.disabled,
+                                        [popupCls.active]: active,
+                                        [popupCls.disabled]: item.disabled,
                                     })}
                                 >
                                     <HStack gap="4">
