@@ -28,16 +28,3 @@ root.render(
         </StoreProvider>
     </BrowserRouter>
 );
-
-// render(
-//     <BrowserRouter>
-//         <StoreProvider>
-//             <ErrorBoundary>
-//                 <ThemeProvider>
-//                     <App />
-//                 </ThemeProvider>
-//             </ErrorBoundary>
-//         </StoreProvider>
-//     </BrowserRouter>,
-//     document.getElementById('root')
-// );
