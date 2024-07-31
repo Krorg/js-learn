@@ -1,12 +1,12 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import withMock from 'storybook-addon-mock';
-import { ArticleType } from 'entities/Article';
-import { Article } from 'entities/Article/model/types/article';
-import { ArticleBlockType } from 'entities/Article/model/consts/articleConsts';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
+import { ArticleType } from '@/entities/Article';
+import { Article } from '@/entities/Article/model/types/article';
+import { ArticleBlockType } from '@/entities/Article/model/consts/articleConsts';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
 
 export default {
     title: 'features/ArticleRecommendationsList',

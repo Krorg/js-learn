@@ -7,6 +7,8 @@ export function buildResolvers(optiopns: BuildOptions): ResolveOptions {
         preferAbsolute: true,
         modules: [optiopns.paths.src, 'node_modules'],
         mainFiles: ['index'],
-        alias: {},
+        alias: {
+            '@': optiopns.paths.src,
+        },
     };
 }

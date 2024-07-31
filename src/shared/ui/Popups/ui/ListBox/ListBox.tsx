@@ -1,8 +1,8 @@
 import { Listbox as HListBox } from '@headlessui/react';
 import { Fragment } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import CheckIcon from 'shared/assets/icons/check.svg';
-import { DropdownDirection } from 'shared/types/ui';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import CheckIcon from '@/shared/assets/icons/check.svg';
+import { DropdownDirection } from '@/shared/types/ui';
 import cls from './ListBox.module.scss';
 import { Button, ButtonTheme } from '../../../Button/Button';
 import { HStack } from '../../../Stack';
