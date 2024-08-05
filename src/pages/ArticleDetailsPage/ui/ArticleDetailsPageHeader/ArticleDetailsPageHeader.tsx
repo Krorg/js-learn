@@ -2,7 +2,7 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { RoutePath } from '@/shared/config/RouteConfig/routeConfig';
+import { RoutePath } from '@/shared/const/router';
 import { Button, ButtonRadius, ButtonTheme } from '@/shared/ui/Button/Button';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getArticleDetailsData } from '@/entities/Article';

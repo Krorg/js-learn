@@ -7,7 +7,7 @@ import EyeIcon from '@/shared/assets/icons/eye.svg';
 import { Card } from '@/shared/ui/Card/Card';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Button, ButtonRadius, ButtonTheme } from '@/shared/ui/Button/Button';
-import { RoutePath } from '@/shared/config/RouteConfig/routeConfig';
+import { RoutePath } from '@/shared/const/router';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
