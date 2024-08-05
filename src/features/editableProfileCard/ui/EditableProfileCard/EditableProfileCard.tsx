@@ -22,6 +22,8 @@ import { fetchProfileData } from '../../model/services/fetchProfileData/fetchPro
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 import { ValidateProfileError } from '../../model/consts/consts';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
+import { getUserAuthDataId } from '@/entities/User';
+import { ProfileRating } from '@/features/profileRating';
 
 interface EditableProfileCardProps {
     className?: string;
@@ -35,6 +37,8 @@ const reducers: ReducersList = {
 export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     const { className, id } = props;
     const { t } = useTranslation('profile');
+    const userId = useSelector(getUserAuthDataId);
+    const canEdit = userId === id;
     const dispatch = useAppDispatch();
     const formData = useSelector(getProfileForm);
     const error = useSelector(getProfileError);
@@ -118,9 +122,13 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         [dispatch]
     );
 
+    if (!id) {
+        return null;
+    }
+
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <VStack gap="8" max className={classNames('', {}, [className])}>
+            <VStack gap="8" max>
                 <EditableProfileCardHeader id={id} />
                 {validateErrors?.length &&
                     validateErrors.map((err) => (
@@ -145,6 +153,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                     onChangeCurrency={onChangeCurrency}
                     readonly={readonly}
                 />
+                {!canEdit && <ProfileRating profileId={id} />}
             </VStack>
         </DynamicModuleLoader>
     );
