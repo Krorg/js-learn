@@ -33,7 +33,7 @@ AuthNavbarNormal.decorators = [
     StoreDecorator({
         user: {
             authData: {
-                avatar: 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614550920_10-p-smeshariki-na-belom-fone-10.jpg',
+                avatar: 'https://bogatyr.club/uploads/posts/2024-04/77038/1712768988_bogatyr-club-bqt0-p-risunok-krosha-foni-1.png',
             },
         },
     }),

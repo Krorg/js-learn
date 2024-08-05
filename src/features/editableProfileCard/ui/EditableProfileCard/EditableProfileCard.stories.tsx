@@ -12,7 +12,12 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [StoreDecorator({})],
+    decorators: [
+        StoreDecorator({
+            user: { authData: { id: '1' } },
+            profile: { data: { id: '1' } },
+        }),
+    ],
 } as ComponentMeta<typeof EditableProfileCard>;
 
 const Template: ComponentStory<typeof EditableProfileCard> = (args) => (
@@ -20,12 +25,12 @@ const Template: ComponentStory<typeof EditableProfileCard> = (args) => (
 );
 
 export const Normal = Template.bind({});
-Normal.args = {};
+Normal.args = { id: '1' };
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = { id: '1' };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Orange = Template.bind({});
-Orange.args = {};
+Orange.args = { id: '1' };
 Orange.decorators = [ThemeDecorator(Theme.ORANGE)];

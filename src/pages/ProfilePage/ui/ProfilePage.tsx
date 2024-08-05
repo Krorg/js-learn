@@ -17,6 +17,10 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
         return <Page>{t('Страница пользователя не найдена')}</Page>;
     }
 
+    if (__PROJECT__ === 'storybook') {
+        return <EditableProfileCard id="1" />;
+    }
+
     return (
         <Page className={classNames('', {}, [className])}>
             <VStack gap="16">

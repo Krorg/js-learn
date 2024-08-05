@@ -5,6 +5,8 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import ProfilePage from './ProfilePage';
+import withMock from 'storybook-addon-mock';
+import { Profile } from '@/entities/Profile';
 
 export default {
     title: 'pages/ProfilePage',
@@ -12,13 +14,14 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [withMock],
 } as ComponentMeta<typeof ProfilePage>;
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => (
     <ProfilePage {...args} />
 );
 
-const data = {
+const dats: Profile = {
     id: '1',
     username: 'Nagibator228',
     first: 'Вася',
@@ -32,9 +35,20 @@ const data = {
 
 export const Primary = Template.bind({});
 Primary.args = {};
+Primary.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/profile/1`,
+            method: 'GET',
+            status: 200,
+            response: [{ ...dats }],
+        },
+    ],
+};
 Primary.decorators = [
     StoreDecorator({
-        profile: { form: data },
+        user: { authData: { id: '1' } },
+        profile: { form: dats },
     }),
 ];
 
@@ -42,5 +56,5 @@ export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [
     ThemeDecorator(Theme.DARK),
-    StoreDecorator({ profile: { form: data } }),
+    StoreDecorator({ profile: { form: dats } }),
 ];
