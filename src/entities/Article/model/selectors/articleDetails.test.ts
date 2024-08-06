@@ -4,7 +4,6 @@ import {
     getArticleDetailsError,
     getArticleDetailsIsLoading,
 } from './articleDetails';
-import { error } from 'console';
 
 describe('getArticleDetailsData', () => {
     const data = {
