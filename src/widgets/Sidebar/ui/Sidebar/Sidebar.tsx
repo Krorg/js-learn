@@ -8,7 +8,7 @@ import {
     ButtonRadius,
     ButtonSize,
     ButtonTheme,
-} from '@/shared/ui/Button/Button';
+} from '@/shared/ui/Button';
 import { VStack } from '@/shared/ui/Stack';
 import cls from './Sidebar.module.scss';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
