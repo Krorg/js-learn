@@ -608,6 +608,13 @@
             "password": "manager",
             "roles": ["MANAGER"],
             "avatar": "https://narisyu.cdnbro.com/posts/01340694-plankton-dlia-srisovki-20.jpg"
+        },
+        {
+            "id": "4",
+            "username": "testuser",
+            "password": "1234",
+            "roles": ["USER"],
+            "avatar": "https://avatars.dzeninfra.ru/get-zen_brief/7732059/pub_633367c58c27f72c4176016d_633367cc1ef058577fce3699/scale_1200"
         }
     ],
     "profile": [
@@ -643,6 +650,17 @@
             "city": "Moskow",
             "username": "Plankton",
             "avatar": "https://narisyu.cdnbro.com/posts/01340694-plankton-dlia-srisovki-20.jpg"
+        },
+        {
+            "id": "4",
+            "first": "Фиксик",
+            "lastname": "Тестирович",
+            "age": 1,
+            "currency": "RUB",
+            "country": "Russia",
+            "city": "Moskow",
+            "username": "testuser",
+            "avatar": "https://avatars.dzeninfra.ru/get-zen_brief/7732059/pub_633367c58c27f72c4176016d_633367cc1ef058577fce3699/scale_1200"
         }
     ],
     "articles-rating": [
