@@ -28,8 +28,8 @@ describe('Роутинг', () => {
             cy.get(selectByTestId('ArticlesPage')).should('exist');
         });
         it('Переход на запрещенную страницу', () => {
-            cy.visit('/admin'),
-                cy.get(selectByTestId('ForbiddenPage')).should('exist');
+            cy.visit('/admin');
+            cy.get(selectByTestId('ForbiddenPage')).should('exist');
         });
     });
 });

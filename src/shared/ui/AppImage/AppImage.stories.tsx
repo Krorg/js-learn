@@ -1,7 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { AppImage } from './AppImage';
-import { Icon } from '../Icon';
-import IconAvatar from '../../assets/icons/article.svg';
 
 export default {
     title: 'shared/AppImage',

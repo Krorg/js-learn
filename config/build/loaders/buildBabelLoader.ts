@@ -26,11 +26,11 @@ export function buildBabelLoader({ isDev, isTsx }: BuildBabelLoaderProps) {
                     '@babel/plugin-transform-runtime',
                     isTsx &&
                         isProd && [
-                            babelRemovePropsPlugin,
-                            {
-                                props: ['data-testid'],
-                            },
-                        ],
+                        babelRemovePropsPlugin,
+                        {
+                            props: ['data-testid'],
+                        },
+                    ],
                     isDev && require.resolve('react-refresh/babel'),
                 ].filter(Boolean),
             },
