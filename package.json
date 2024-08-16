@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "webpack serve --env port=3000",
+        "start:host": "webpack-dev-server --host 192.168.10.124",
         "start:vite": "vite",
         "start:dev:server": "node ./json-server/index.js",
         "build:prod": "webpack  --env mode=production",
