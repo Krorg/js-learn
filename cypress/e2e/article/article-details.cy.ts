@@ -33,4 +33,14 @@ describe('Пользователь открывает страницу стат�
         cy.setRate(4, 'feedback');
         cy.get('[data-selected=true]').should('have.length', 4);
     });
+    // Пример замоканного запроса
+    it('и ставит оценку', () => {
+        cy.intercept('GET', '**/articles/**', {
+            fixture: 'article-details.json',
+        });
+        cy.getByTestId('ArticleDetails.Info');
+        cy.getByTestId('RatingCard').scrollIntoView();
+        cy.setRate(4, 'feedback');
+        cy.get('[data-selected=true]').should('have.length', 4);
+    });
 });
