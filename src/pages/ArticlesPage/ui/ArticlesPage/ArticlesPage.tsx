@@ -14,6 +14,7 @@ import cls from './ArticlesPage.module.scss';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
+import { useArticleItemById } from '../../model/selectors/getArticlesPageSelectors';
 
 interface ArticlesPageProps {
     className?: string;
