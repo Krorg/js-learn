@@ -611,7 +611,7 @@
       ],
       "avatar": "https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/japanese-traditional-man-1024.png",
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_orange_theme",
         "isFirstVisit": false
       }
     },
@@ -636,7 +636,7 @@
       ],
       "avatar": "https://narisyu.cdnbro.com/posts/01340694-plankton-dlia-srisovki-20.jpg",
       "jsonSettings": {
-        "theme": "app_orange_theme"
+        "theme": "app_dark_theme"
       }
     },
     {
