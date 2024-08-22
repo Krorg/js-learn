@@ -609,7 +609,11 @@
       "roles": [
         "ADMIN"
       ],
-      "avatar": "https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/japanese-traditional-man-1024.png"
+      "avatar": "https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/japanese-traditional-man-1024.png",
+      "jsonSettings": {
+        "theme": "app_light_theme",
+        "isFirstVisit": false
+      }
     },
     {
       "id": "2",
@@ -618,7 +622,10 @@
       "roles": [
         "USER"
       ],
-      "avatar": "https://bogatyr.club/uploads/posts/2024-04/77038/1712768988_bogatyr-club-bqt0-p-risunok-krosha-foni-1.png"
+      "avatar": "https://klass.market/uploadedFiles/eshopimages/big/_584e9398050d7.jpg",
+      "jsonSettings": {
+        "theme": "app_dark_theme"
+      }
     },
     {
       "id": "3",
@@ -627,7 +634,10 @@
       "roles": [
         "MANAGER"
       ],
-      "avatar": "https://narisyu.cdnbro.com/posts/01340694-plankton-dlia-srisovki-20.jpg"
+      "avatar": "https://narisyu.cdnbro.com/posts/01340694-plankton-dlia-srisovki-20.jpg",
+      "jsonSettings": {
+        "theme": "app_orange_theme"
+      }
     },
     {
       "id": "4",
@@ -660,7 +670,7 @@
       "country": "Russia",
       "city": "Moskow",
       "username": "Kro$hik",
-      "avatar": "https://bogatyr.club/uploads/posts/2024-04/77038/1712768988_bogatyr-club-bqt0-p-risunok-krosha-foni-1.png"
+      "avatar": "https://klass.market/uploadedFiles/eshopimages/big/_584e9398050d7.jpg"
     },
     {
       "id": "3",
