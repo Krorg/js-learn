@@ -612,7 +612,8 @@
       "avatar": "https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/japanese-traditional-man-1024.png",
       "jsonSettings": {
         "theme": "app_orange_theme",
-        "isFirstVisit": false
+        "isFirstVisit": false,
+        "isArticlePageWasOpened": true
       }
     },
     {
@@ -624,7 +625,8 @@
       ],
       "avatar": "https://klass.market/uploadedFiles/eshopimages/big/_584e9398050d7.jpg",
       "jsonSettings": {
-        "theme": "app_dark_theme"
+        "theme": "app_dark_theme",
+        "isArticlePageWasOpened": true
       }
     },
     {
@@ -636,7 +638,8 @@
       ],
       "avatar": "https://narisyu.cdnbro.com/posts/01340694-plankton-dlia-srisovki-20.jpg",
       "jsonSettings": {
-        "theme": "app_dark_theme"
+        "theme": "app_dark_theme",
+        "isArticlePageWasOpened": true
       }
     },
     {
