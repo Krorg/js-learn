@@ -4,6 +4,7 @@ import { User, UserSchema } from '../types/user';
 import { saveJsonSettings } from '../services/saveJsonSettings';
 import { JsonSettings } from '../types/jsonSettings';
 import { initAuthData } from '../services/initAuthData';
+import { setFeatureFlags } from '@/shared/lib/features';
 
 const initialState: UserSchema = {
     _inited: false,
@@ -15,7 +16,7 @@ export const userSlice = createSlice({
     reducers: {
         setAuthData: (state, action: PayloadAction<User>) => {
             state.authData = action.payload;
-
+            setFeatureFlags(action.payload.features);
             localStorage.setItem(USER_LOCALSTORAGE_KEY, action.payload.id);
         },
         logout: (state) => {
@@ -36,6 +37,7 @@ export const userSlice = createSlice({
             initAuthData.fulfilled,
             (state, { payload }: PayloadAction<User>) => {
                 state.authData = payload;
+                setFeatureFlags(payload.features);
                 state._inited = true;
             }
         );
