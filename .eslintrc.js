@@ -87,6 +87,7 @@ module.exports = {
         'no-unsafe-optional-chaining': 'off',
         'no-unused-expressions': 'off',
         indent: ['error', 4, { SwitchCase: 1 }],
+        'react/no-unstable-nested-components': 'warn',
     },
     globals: {
         __IS_DEV__: true,
