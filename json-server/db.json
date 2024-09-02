@@ -612,10 +612,11 @@
       "avatar": "https://cdn3.iconfinder.com/data/icons/diversity-avatars/64/japanese-traditional-man-1024.png",
       "features": {
         "isArticleRatingEnabled": true,
-        "isCounterEnabled": true
+        "isCounterEnabled": true,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_orange_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": false,
         "isArticlePageWasOpened": true
       }

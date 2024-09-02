@@ -9,6 +9,8 @@ import { Sidebar } from '@/widgets/Sidebar';
 import { getUserInited, initAuthData } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { PageLoader } from '@/widgets/PageLoader/PageLoader';
+import { ToggleFeature } from '@/shared/lib/features';
+import { MainLayout } from '@/shared/layouts/MainLayout';
 
 export const App = () => {
     const { theme } = useTheme();
@@ -24,14 +26,31 @@ export const App = () => {
     }
 
     return (
-        <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback="">
-                <Navbar />
-                <div className="content-page">
-                    <Sidebar />
-                    {inited && <AppRouter />}
+        <ToggleFeature
+            feature="isAppRedesigned"
+            off={(
+                <div className={classNames('app', {}, [theme])}>
+                    <Suspense fallback="">
+                        <Navbar />
+                        <div className="content-page">
+                            <Sidebar />
+                            <AppRouter />
+                        </div>
+                    </Suspense>
                 </div>
-            </Suspense>
-        </div>
+            )}
+            on={(
+                <div className={classNames('app_redesigned', {}, [theme])}>
+                    <Suspense fallback="">
+                        <MainLayout
+                            header={<Navbar />}
+                            content={<AppRouter />}
+                            sidebar={<Sidebar />}
+                            toolbar={<div>ToolBar</div>}
+                        />
+                    </Suspense>
+                </div>
+            )}
+        />
     );
 };

@@ -5,13 +5,10 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { LoginModal } from '@/features/AuthByUsername';
 import { getUserAuthData } from '@/entities/User';
-import { Text, TextTheme } from '@/shared/ui/Text';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
-import { getRouteArticleCreate } from '@/shared/const/router';
-import { HStack } from '@/shared/ui/Stack';
-import { NotificationButton } from '@/features/notificationButton';
-import { AvatarDropdown } from '@/features/avatarDropdown';
+import { ToggleFeature } from '@/shared/lib/features';
 import cls from './Navbar.module.scss';
+import { NavbarRedesigned } from './NavbarRedesigned';
+import { NavbarOldDesign } from './NavbarOldDesign';
 
 interface NavbarProps {
     className?: string;
@@ -32,24 +29,11 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
     if (authData) {
         return (
-            <header className={classNames(cls.navbar, {}, [className])}>
-                <Text
-                    className={cls.appName}
-                    title={t('Learn APP')}
-                    theme={TextTheme.INVERTED}
-                />
-                <AppLink
-                    to={getRouteArticleCreate()}
-                    theme={AppLinkTheme.SECONDARY}
-                    className={cls.createBtn}
-                >
-                    {t('Создать статью')}
-                </AppLink>
-                <HStack gap="16" className={cls.actions}>
-                    <NotificationButton />
-                    <AvatarDropdown />
-                </HStack>
-            </header>
+            <ToggleFeature
+                feature="isAppRedesigned"
+                on={<NavbarRedesigned />}
+                off={<NavbarOldDesign />}
+            />
         );
     }
 
