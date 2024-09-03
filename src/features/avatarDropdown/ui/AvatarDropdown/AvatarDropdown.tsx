@@ -2,9 +2,9 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Dropdown } from '@/shared/ui/Popups';
+import { Dropdown } from '@/shared/ui/deprecated/Popups';
 import { getRouteAdmin, getRouteProfile } from '@/shared/const/router';
-import { Avatar } from '@/shared/ui/Avatar';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import {
     getUserAuthData,
     isUserAdmin,

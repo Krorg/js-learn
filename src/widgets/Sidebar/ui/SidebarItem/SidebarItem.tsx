@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { getUserAuthData } from '@/entities/User';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
+import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
 import { SidebarItemType } from '@/widgets/Sidebar/model/types/sidebar';
 import cls from './SidebarItem.module.scss';
-import { Icon } from '@/shared/ui/Icon';
+import { Icon } from '@/shared/ui/deprecated/Icon';
 
 interface SidebarItemProps {
     item: SidebarItemType;

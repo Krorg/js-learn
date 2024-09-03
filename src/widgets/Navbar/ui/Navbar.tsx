@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { LoginModal } from '@/features/AuthByUsername';
 import { getUserAuthData } from '@/entities/User';
 import { ToggleFeature } from '@/shared/lib/features';
