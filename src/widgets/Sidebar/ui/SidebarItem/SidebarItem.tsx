@@ -6,6 +6,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { SidebarItemType } from '@/widgets/Sidebar/model/types/sidebar';
 import cls from './SidebarItem.module.scss';
+import { Icon } from '@/shared/ui/Icon';
 
 interface SidebarItemProps {
     item: SidebarItemType;
@@ -26,7 +27,7 @@ export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
             to={item.path}
             className={classNames(cls.item, { [cls.collapsed]: collapsed })}
         >
-            <item.Icon className={cls.icon} />
+            <Icon Svg={item.Icon} width={24} height={24} inverted />
             <span className={cls.link}>{t(item.text)}</span>
         </AppLink>
     );

@@ -8,6 +8,7 @@ import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { Theme } from '@/shared/const/theme';
 import { saveJsonSettings } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Icon } from '../../Icon';
 
 interface ThemeSwitcherProps {
     className?: string;
@@ -27,16 +28,16 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
 
     switch (theme) {
         case Theme.DARK:
-            icon = <DarkIcon />;
+            icon = <Icon Svg={DarkIcon} width={40} height={40} inverted />;
             break;
         case Theme.LIGHT:
-            icon = <LightIcon />;
+            icon = <Icon Svg={LightIcon} width={40} height={40} inverted />;
             break;
         case Theme.ORANGE:
-            icon = <OrangeIcon />;
+            icon = <Icon Svg={OrangeIcon} width={40} height={40} />;
             break;
         default:
-            icon = <LightIcon />;
+            icon = <Icon Svg={LightIcon} width={40} height={40} inverted />;
     }
     return (
         <Button
