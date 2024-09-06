@@ -5,9 +5,9 @@ import {
     useAnimationLibs,
 } from '@/shared/lib/components/AnimationProvider';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
-import { Overlay } from '../Overlay';
+import { Overlay } from '../../redesigned/Overlay';
 import cls from './Drawer.module.scss';
-import { Portal } from '../Portal';
+import { Portal } from '../../redesigned/Portal';
 
 interface DrawerProps {
     className?: string;
