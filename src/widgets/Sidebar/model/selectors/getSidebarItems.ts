@@ -6,10 +6,15 @@ import {
     getRouteMain,
     getRouteProfile,
 } from '@/shared/const/router';
-import AboutIcon from '@/shared/assets/icons/about-page.svg';
-import MainIcon from '@/shared/assets/icons/main-page.svg';
-import ProfileIcon from '@/shared/assets/icons/profile-page.svg';
-import ArticleIcon from '@/shared/assets/icons/article.svg';
+import AboutIconDeprecated from '@/shared/assets/icons/about-page.svg';
+import AboutIcon from '@/shared/assets/icons/info.svg';
+import MainIconDeprecated from '@/shared/assets/icons/main-page.svg';
+import MainIcon from '@/shared/assets/icons/home.svg';
+import ProfileIconDeprecated from '@/shared/assets/icons/profile-page.svg';
+import ProfileIcon from '@/shared/assets/icons/avatar.svg';
+import ArticleIconDeprecated from '@/shared/assets/icons/article.svg';
+import ArticleIcon from '@/shared/assets/icons/articleNew.svg';
+import { toggleFeatures } from '@/shared/lib/features';
 import { SidebarItemType } from '../types/sidebar';
 
 export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
@@ -17,12 +22,20 @@ export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
         {
             path: getRouteMain(),
             text: 'Главная',
-            Icon: MainIcon,
+            Icon: toggleFeatures({
+                name: 'isAppRedesigned',
+                on: () => MainIcon,
+                off: () => MainIconDeprecated,
+            }),
         },
         {
             path: getRouteAbout(),
             text: 'О сайте',
-            Icon: AboutIcon,
+            Icon: toggleFeatures({
+                name: 'isAppRedesigned',
+                on: () => AboutIcon,
+                off: () => AboutIconDeprecated,
+            }),
         },
     ];
 
@@ -31,13 +44,21 @@ export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
             {
                 path: getRouteProfile(userData?.id),
                 text: 'Профиль',
-                Icon: ProfileIcon,
+                Icon: toggleFeatures({
+                    name: 'isAppRedesigned',
+                    on: () => ProfileIcon,
+                    off: () => ProfileIconDeprecated,
+                }),
                 authOnly: true,
             },
             {
                 path: getRouteArticles(),
                 text: 'Статьи',
-                Icon: ArticleIcon,
+                Icon: toggleFeatures({
+                    name: 'isAppRedesigned',
+                    on: () => ArticleIcon,
+                    off: () => ArticleIconDeprecated,
+                }),
                 authOnly: true,
             }
         );
