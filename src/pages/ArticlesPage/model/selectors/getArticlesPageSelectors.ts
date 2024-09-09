@@ -13,7 +13,7 @@ export const getArticlesPageError = (state: StateSchema) =>
 export const getArticlesPageView = (state: StateSchema) =>
     state.articlesPage?.view || ArticleView.SMALL;
 export const getArticlesPageLimit = (state: StateSchema) =>
-    state.articlesPage?.limit || 9;
+    state.articlesPage?.limit || 12;
 export const getArticlesPageHasMore = (state: StateSchema) =>
     state.articlesPage?.hasMore;
 export const getArticlesPageNum = (state: StateSchema) =>

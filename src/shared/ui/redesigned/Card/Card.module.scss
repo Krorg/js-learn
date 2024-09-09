@@ -1,9 +1,14 @@
 .Card {
-    border-radius: 12px;
+    padding: 24px;
 }
 
 .normal {
+    border-radius: 12px;
     background: var(--dark-bg-redesigned);
+}
+
+.round {
+    border-radius: 40px;
 }
 
 .outlined {
