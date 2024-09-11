@@ -15,17 +15,13 @@ export function RequireAuth(props: RequireAuthProps) {
     const location = useLocation();
     const userRoles = useSelector(getUserRoles);
 
-    console.log('asdasdasd', userRoles);
-
     const hasRequireRoles = useMemo(() => {
         if (!roles) {
-            console.log('hi');
             return true;
         }
 
         return roles.some((requiredRole) => {
             const hasRole = userRoles?.includes(requiredRole);
-            console.log('hasRole', hasRole);
             return hasRole;
         });
     }, [roles, userRoles]);

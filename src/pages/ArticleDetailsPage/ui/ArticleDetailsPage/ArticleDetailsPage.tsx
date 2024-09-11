@@ -15,7 +15,7 @@ import { articleDetailsPageReducer } from '../../model/slice';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/articleRating';
-import { ToggleFeature } from '@/shared/lib/features';
+import { ToggleFeature } from '@/shared/lib/features/';
 import { Card } from '@/shared/ui/deprecated/Card';
 
 interface ArticleDetailsPageProps {

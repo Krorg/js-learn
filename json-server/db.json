@@ -648,7 +648,8 @@
       "avatar": "https://narisyu.cdnbro.com/posts/01340694-plankton-dlia-srisovki-20.jpg",
       "features": {
         "isArticleRatingEnabled": false,
-        "isCounterEnabled": false
+        "isCounterEnabled": false,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_light_theme",
