@@ -1,5 +1,6 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticleListItem.module.scss';
 import { ArticleListItemProps } from './ArticleListItem';
 import { Text } from '@/shared/ui/deprecated/Text';
@@ -21,7 +22,6 @@ import {
     ButtonTheme,
 } from '@/shared/ui/deprecated/Button';
 import { getRouteArticleDetails } from '@/shared/const/router';
-import { useTranslation } from 'react-i18next';
 import EyeIcon from '@/shared/assets/icons/eye.svg';
 
 export const ArticleListItemDeprecated = memo((props: ArticleListItemProps) => {

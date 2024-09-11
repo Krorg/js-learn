@@ -7,6 +7,8 @@ import { ArticleView } from '../../model/consts/articleConsts';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
+import { ToggleFeature } from '@/shared/lib/features';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 
 interface ArticleListProps {
     className?: string;
@@ -62,12 +64,31 @@ export const ArticleList = memo((props: ArticleListProps) => {
     }
 
     return (
-        <div
-            data-testid="ArticleList"
-            className={classNames(cls.ArticleList, {}, [className, cls[view]])}
-        >
-            {articles.length > 0 ? articles.map(renderArticle) : null}
-            {isLoading && getSkeletons(view)}
-        </div>
+        <ToggleFeature
+            feature="isAppRedesigned"
+            on={(
+                <HStack
+                    wrap="wrap"
+                    gap="16"
+                    data-testid="ArticleList"
+                    className={classNames(cls.ArticleListRedesigned, {}, [])}
+                >
+                    {articles.length > 0 ? articles.map(renderArticle) : null}
+                    {isLoading && getSkeletons(view)}
+                </HStack>
+            )}
+            off={(
+                <div
+                    data-testid="ArticleList"
+                    className={classNames(cls.ArticleList, {}, [
+                        className,
+                        cls[view],
+                    ])}
+                >
+                    {articles.length > 0 ? articles.map(renderArticle) : null}
+                    {isLoading && getSkeletons(view)}
+                </div>
+            )}
+        />
     );
 });

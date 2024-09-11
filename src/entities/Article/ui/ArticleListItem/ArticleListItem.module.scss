@@ -113,3 +113,19 @@
         white-space: nowrap;
     }
 }
+
+.ArticleListItemRedesigned {
+    &.BIG {
+        width: 100%;
+    }
+
+    &.SMALL {
+        .card {
+            width: 230px;
+            height: 320px;
+            border-radius: 40px;
+            overflow: hidden;
+            padding: 8px;
+        }
+    }
+}
