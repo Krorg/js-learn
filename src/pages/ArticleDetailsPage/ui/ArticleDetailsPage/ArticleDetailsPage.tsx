@@ -42,9 +42,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <ToggleFeature
                 feature="isAppRedesigned"
-                on={
+                on={(
                     <StickyContentLayout
-                        content={
+                        content={(
                             <Page
                                 className={classNames(
                                     cls.ArticleDetailsPage,
@@ -59,11 +59,11 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                                     <ArticleDetailsComments id={id} />
                                 </VStack>
                             </Page>
-                        }
+                        )}
                         right={<AdditionalInfoContainer />}
                     />
-                }
-                off={
+                )}
+                off={(
                     <Page
                         className={classNames(cls.ArticleDetailsPage, {}, [
                             className,
@@ -75,17 +75,17 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                             <ToggleFeature
                                 feature="isArticleRatingEnabled"
                                 on={<ArticleRating articleId={id} />}
-                                off={
+                                off={(
                                     <Card>
                                         {t('Оценка статей скоро появиться')}
                                     </Card>
-                                }
+                                )}
                             />
                             <ArticleRecommendationsList />
                             <ArticleDetailsComments id={id} />
                         </VStack>
                     </Page>
-                }
+                )}
             />
         </DynamicModuleLoader>
     );
