@@ -46,6 +46,26 @@
     }
 }
 
+.outlined_red {
+    background: none;
+    border: 1px solid var(--cancel-redesigned);
+    border-radius: 16px;
+
+    &:hover {
+        border: 1px solid var(--accent-cancel-redesigned);
+    }
+}
+
+.outlined_green {
+    background: none;
+    border: 1px solid var(--save-redesigned);
+    border-radius: 16px;
+
+    &:hover {
+        border: 1px solid var(--accent-save-redesigned);
+    }
+}
+
 .filled {
     background: var(--light-bg-redesigned);
     border-radius: 34px;
