@@ -7,6 +7,7 @@ import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton'
 import { ArticleView } from '../../model/consts/articleConsts';
 import cls from './ArticleListItem.module.scss';
 import { toggleFeatures } from '@/shared/lib/features';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 
 interface ArticleListItemSkeletonProps {
     className?: string;
@@ -71,17 +72,18 @@ export const ArticleListItemSkeleton = memo(
         return (
             <div className={classNames(mainClass, {}, [className, cls[view]])}>
                 <Card className={cls.card}>
-                    <div className={cls.imageWrapper}>
-                        <Skeleton
-                            width={200}
-                            height={200}
-                            className={cls.img}
-                        />
-                    </div>
-                    <div className={cls.infoWrapper}>
-                        <Skeleton width={130} height={16} />
-                    </div>
-                    <Skeleton width={200} height={16} className={cls.title} />
+                    <VStack gap="8">
+                        <Skeleton width={'100%'} height={140} />
+                        <Skeleton width={180} height={60} />
+                        <HStack max justify="between">
+                            <Skeleton width={60} height={20} />
+                            <Skeleton width={60} height={20} />
+                        </HStack>
+                        <HStack gap="8">
+                            <Skeleton width={32} height={32} border="50%" />
+                            <Skeleton width={60} height={20} />
+                        </HStack>
+                    </VStack>
                 </Card>
             </div>
         );
