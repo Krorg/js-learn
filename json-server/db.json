@@ -599,6 +599,42 @@
       "userId": "1",
       "text": "Test",
       "id": "MQdzCYs"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Test after redesigned",
+      "id": "ikhwW3X"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "non et atque occaecati deserunt quas accusantium unde odit nobis qui voluptatem quia voluptas consequuntur itaque dolor et qui rerum deleniti ut occaecati",
+      "id": "DiWiupW"
+    },
+    {
+      "articleId": "13",
+      "userId": "1",
+      "text": "1",
+      "id": "0X5y-1l"
+    },
+    {
+      "articleId": "13",
+      "userId": "1",
+      "text": "2",
+      "id": "m_t3om1"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "1",
+      "id": "NFZPKON"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "2",
+      "id": "4uRWR8D"
     }
   ],
   "users": [
@@ -616,7 +652,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": false,
         "isArticlePageWasOpened": true
       }
@@ -792,6 +828,19 @@
       "rate": 1,
       "feedback": "",
       "id": "Afp-ho6"
+    },
+    {
+      "userId": "1",
+      "articleId": "12",
+      "rate": 3,
+      "feedback": "123",
+      "id": "bHajko_"
+    },
+    {
+      "userId": "1",
+      "articleId": "11",
+      "rate": 4,
+      "id": "bLSvc0W"
     }
   ],
   "profile-rating": [
