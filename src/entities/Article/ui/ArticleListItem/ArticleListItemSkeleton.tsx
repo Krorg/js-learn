@@ -73,7 +73,7 @@ export const ArticleListItemSkeleton = memo(
             <div className={classNames(mainClass, {}, [className, cls[view]])}>
                 <Card className={cls.card}>
                     <VStack gap="8">
-                        <Skeleton width={'100%'} height={140} />
+                        <Skeleton width="100%" height={140} />
                         <Skeleton width={180} height={60} />
                         <HStack max justify="between">
                             <Skeleton width={60} height={20} />

@@ -67,13 +67,13 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
             onSuccess();
             forceUpdate();
         }
-    }, [onSuccess, dispatch, username, password]);
+    }, [onSuccess, dispatch, username, password, forceUpdate]);
 
     return (
         <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
             <ToggleFeature
                 feature="isAppRedesigned"
-                on={
+                on={(
                     <VStack
                         gap="8"
                         className={classNames(cls.LoginForm, {}, [className])}
@@ -108,8 +108,8 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                             {t('Войти')}
                         </Button>
                     </VStack>
-                }
-                off={
+                )}
+                off={(
                     <div className={classNames(cls.LoginForm, {}, [className])}>
                         <TextDeprecated title={t('Форма авторизации')} />
                         {error && (
@@ -143,7 +143,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                             {t('Войти')}
                         </ButtonDeprecated>
                     </div>
-                }
+                )}
             />
         </DynamicModuleLoader>
     );

@@ -1,4 +1,4 @@
-import { ForwardedRef, ReactNode, forwardRef, memo } from 'react';
+import { ForwardedRef, ReactNode, forwardRef } from 'react';
 import { LinkProps, NavLink } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './AppLink.module.scss';
@@ -29,8 +29,7 @@ export const AppLink = forwardRef(
                     classNames(cls.AppLink, { [activeClassName]: isActive }, [
                         className,
                         cls[variant],
-                    ])
-                }
+                    ])}
                 ref={ref}
                 {...otherProps}
             >

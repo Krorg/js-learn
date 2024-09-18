@@ -51,12 +51,12 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         <header className={classNames(mainClass, {}, [className])}>
             <ToggleFeature
                 feature="isAppRedesigned"
-                on={
+                on={(
                     <Button variant="clear" onClick={onShowModal}>
                         {t('Войти')}
                     </Button>
-                }
-                off={
+                )}
+                off={(
                     <ButtonDeprecated
                         theme={ButtonTheme.CLEAR_INVERTED}
                         className={cls.links}
@@ -64,7 +64,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     >
                         {t('Войти')}
                     </ButtonDeprecated>
-                }
+                )}
             />
             {isAuthModal && (
                 <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />

@@ -46,7 +46,7 @@ export const EditableProfileCardHeader = memo(
         return (
             <ToggleFeature
                 feature="isAppRedesigned"
-                on={
+                on={(
                     <HStack justify="between" max>
                         <Text title={t('Профиль')} align="center" />
                         {canEdit && (
@@ -79,8 +79,8 @@ export const EditableProfileCardHeader = memo(
                             </div>
                         )}
                     </HStack>
-                }
-                off={
+                )}
+                off={(
                     <HStack justify="between" max>
                         <TextDeprecated
                             title={t('Профиль')}
@@ -120,7 +120,7 @@ export const EditableProfileCardHeader = memo(
                             </div>
                         )}
                     </HStack>
-                }
+                )}
             />
         );
     }
