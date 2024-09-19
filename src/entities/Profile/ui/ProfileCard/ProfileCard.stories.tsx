@@ -4,6 +4,7 @@ import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator/NewDesignDecorator';
 
 export default {
     title: 'entities/ProfileCard',
@@ -33,11 +34,23 @@ Primary.args = {
     data,
 };
 
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = {
+    data,
+};
+PrimaryRedesigned.decorators = [NewDesignDecorator];
+
 export const Dark = Template.bind({});
 Dark.args = {
     data,
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const DarkRedesigned = Template.bind({});
+DarkRedesigned.args = {
+    data,
+};
+DarkRedesigned.decorators = [NewDesignDecorator, ThemeDecorator(Theme.DARK)];
 
 export const Orange = Template.bind({});
 Orange.args = { data };

@@ -3,6 +3,7 @@ import { CommentCard } from './CommentCard';
 import { Comment } from '@/entities/Comment/model/types/comment';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator/NewDesignDecorator';
 
 export default {
     title: 'entities/Comment/CommentCard',
@@ -22,7 +23,7 @@ const comment: Comment = {
     user: {
         id: '1',
         username: 'Смешарик',
-        avatar: 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614550920_10-p-smeshariki-na-belom-fone-10.jpg',
+        avatar: 'https://klass.market/uploadedFiles/eshopimages/big/s1200.png',
     },
 };
 
@@ -30,6 +31,12 @@ export const Primary = Template.bind({});
 Primary.args = {
     comment,
 };
+
+export const PrimaryNewDesign = Template.bind({});
+PrimaryNewDesign.args = {
+    comment,
+};
+PrimaryNewDesign.decorators = [NewDesignDecorator];
 
 export const Dark = Template.bind({});
 Dark.args = {
